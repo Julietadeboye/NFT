@@ -16,6 +16,10 @@ const Head = styled.div`
   color: white;
   margin-top: 10px;
   position: static;
+
+  @media (max-width: 1300px) {
+      width: 95%;
+  }
 `;
 
 const List = styled.ul`
@@ -98,7 +102,7 @@ export const Header = () => {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        marginX="40px"
+        marginX="20px"
       >
         {isMobile && <Frame1 size="33px" />}
       </Box>
