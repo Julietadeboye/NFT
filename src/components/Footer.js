@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Box from "ui-box";
-import { useMediaQuery } from "react-responsive";
+
 
 const Foot = styled.div`
   display: flex;

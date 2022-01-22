@@ -15,10 +15,11 @@ const Head = styled.div`
   height: 100px;
   color: white;
   margin-top: 10px;
-  position: static;
+  position: sticky;
+  top: 10px;
 
   @media (max-width: 1300px) {
-      width: 95%;
+    width: 95%;
   }
 `;
 
@@ -39,7 +40,7 @@ const Item = styled.li`
   font-size: 12px;
   justify-content: center;
   &:hover {
-    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.02);
   }
 `;
 
@@ -55,6 +56,10 @@ const Button = styled.button`
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   margin-right: 80px;
+  &:hover {
+    
+    background: rgba(255, 255, 255, 0.15);
+  }
 
   @media (max-width: 1800px) {
     margin-right: 60px;
