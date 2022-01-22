@@ -3,17 +3,78 @@ import styled from "@emotion/styled";
 import Box from "ui-box";
 import Ben from "../assets/images/benParker.svg";
 import { useMediaQuery } from "react-responsive";
+import { Footer } from "./Footer";
 
 const H4 = styled.h4`
   font-size: 20px;
   font-weight: bold;
   line-height: 90px;
+
+  @media (max-width: 1100px) {
+    padding-top: 30px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 376px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 
 const H1 = styled.h1`
   font-weight: bold;
   line-height: 90px;
   font-size: 90px;
+
+  @media (max-width: 1100px) {
+    font-size: 50px;
+    line-height: 60px;
+
+    @media (max-width: 710px) {
+        font-size: 40px;
+        line-height: 50px;
+       }
+
+       @media (max-width: 509px) {
+        font-size: 35px;
+        line-height: 40px;
+       }
+
+       @media (max-width: 447px) {
+        font-size: 30px;
+        line-height: 35px;
+       }
+
+       @media (max-width: 385px) {
+        font-size: 28px;
+        line-height: 30px;
+       }
+
+       @media (max-width: 357px) {
+        font-size: 23px;
+        line-height: 25px;
+       }
+`;
+
+const Title = styled.div`
+@media (max-width: 1100px) {
+   width: 70%;
+   margin:0 auto;
+    
+   @media (max-width: 800px) {
+    width: 80%;
+   }
+
+   @media (max-width: 579px) {
+    width: 90%;
+   }
 `;
 
 const P = styled.p`
@@ -21,6 +82,19 @@ const P = styled.p`
   line-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.72);
   margin-top: 30px;
+  width: 70%;
+
+  @media (max-width: 2239px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1949px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1617px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -38,6 +112,25 @@ const Button = styled.button`
   &:hover {
     color: white;
   }
+
+  @media (max-width: 1772px) {
+    margin-left: 0;
+    padding: 20px 40px;
+    margin-right:10px;
+
+    @media (max-width: 1400px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 520px) {
+        padding: 15px 25px;
+        font-size: 13px;
+       }
+
+       @media (max-width: 391px) {
+        
+        font-size: 11px;
+       }
 `;
 
 const Buttons = styled.button`
@@ -55,26 +148,63 @@ const Buttons = styled.button`
   &:hover {
     color: #ffd600;
   }
+
+  @media (max-width: 1540px) {
+    margin-left: 0;
+    padding: 20px 25px;
+    margin-right:10px;
+
+    @media (max-width: 1400px) {
+        font-size: 13px;
+    }
+
+   @media (max-width: 520px) {
+    padding: 10px 15px;
+    font-size: 10px;
+    margin-right: 5px;
+   }
 `;
 
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @media (max-width: 750px) {
+    width: 70%;
+  }
+`;
 export const Body = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   return (
     <Box
       width="85%"
       marginX="auto"
       display="flex"
-      justifyContent="left"
+      justifyContent={isMobile ? "center" : "left"}
+      alignItems="center"
+      flexDirection={isMobile ? "column" : "row"}
       marginTop="100px"
     >
-      <Box width="50%" display="flex" justifyContent="center">
+      <Box
+        width={isMobile ? "70%" : "50%"}
+        display="flex"
+        justifyContent="center"
+      >
         <img src={Ben} />
       </Box>
 
-      <Box width="45%">
-        <H4>WELCOME TO THE</H4>
-        <H1>
-          LAZY CAT <br /> SOCIAL CLUB
-        </H1>
+      <Box width={isMobile ? "70%" : "50%"}>
+        <Title>
+          <H4>WELCOME TO THE</H4>
+          <H1>
+            LAZY CAT <br /> SOCIAL CLUB
+          </H1>
+        </Title>
+
         <P>
           3,500 Lazy Cats, too lazy to do anything but make it and socialize on
           the solana blockchain. Ermm.. We just want to buy our mothers a house
@@ -87,12 +217,22 @@ export const Body = () => {
           access to member-only benefits..
         </P>
 
-        <Box marginY="50px">
+        <Div>
           <Button>JOIN THE CLUB</Button>
-          <Buttons>TWITTER</Buttons>
-          <Buttons>DISCORD</Buttons>
-        </Box>
+          <Box
+            marginY="15px"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            paddingBottom="15px"
+       
+          >
+            <Buttons>TWITTER</Buttons>
+            <Buttons>DISCORD</Buttons>
+          </Box>
+        </Div>
       </Box>
+      <Footer />
     </Box>
   );
 };
