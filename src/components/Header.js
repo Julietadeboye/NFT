@@ -40,7 +40,7 @@ const Item = styled.li`
   font-size: 12px;
   justify-content: center;
   &:hover {
-    color: rgba(255, 255, 255, 0.02);
+    color: rgba(255, 255, 255, 0.62);
   }
 `;
 
@@ -94,10 +94,10 @@ export const Header = () => {
         justifyContent="space-between"
       >
         <List>
-          <li>ROADMAP</li>
-          <li>TRAITS & RARITY</li>
-          <li> FAQ</li>
-          <li>TEAM</li>
+          <Item>ROADMAP</Item>
+          <Item>TRAITS & RARITY</Item>
+          <Item> FAQ</Item>
+          <Item>TEAM</Item>
         </List>
 
         <Button>CONNECT WALLET </Button>

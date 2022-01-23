@@ -1,6 +1,7 @@
 import "./App.css";
 import {Header} from "./components/Header";
 import {Body} from "./components/Body";
+import {Roadmap} from "./components/Roadmap";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Body />
+      <Roadmap />
     
     </div>
   );

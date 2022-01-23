@@ -188,7 +188,7 @@ const Buttons = styled.button`
 export const Body = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   return (
-    <Box display="flex" flexDirection="column">
+    <Box display="flex" flexDirection="column" marginBottom="200px">
       <Box
         width="85%"
         marginX="auto"

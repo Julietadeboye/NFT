@@ -1,13 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
-  }
+}
 
-  body {
-    background: black;
-    font-family: 'Readex Pro', sans-serif;
-    color: white;
+body {
+  background: black;
+  font-family: "Readex Pro", sans-serif;
+  color: white;
+}
+
+.list li::before {
+  content: "\2022";
+  color: #FFD600;
+  font-weight: bold;
+  font-size:22px ;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 3.5em;
+
+}
+
+.list li{
+
+  display: flex;
+}
+
+@media screen and (max-width: 1753px){
+
+  
+  .list li::before {
+  margin-right: 1.5em;}
 }
 
