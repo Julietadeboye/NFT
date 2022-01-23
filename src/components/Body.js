@@ -96,11 +96,21 @@ const P = styled.p`
     width: 100%;
   }
 `;
+const Div = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+`;
 
 const Button = styled.button`
   border: none;
   text-decoration: none;
-  text-transform: uppercase;
   line-height: 120%;
   padding: 20px 60px;
   font-size: 20px;
@@ -109,6 +119,7 @@ const Button = styled.button`
   background: #ffd600;
   border-radius: 45px;
   margin: 0px 30px;
+  
   &:hover {
     color: white;
   }
@@ -119,6 +130,15 @@ const Button = styled.button`
     margin-right:10px;
 
     @media (max-width: 1400px) {
+        font-size: 15px;
+    }
+
+    @media (max-width:1100px){
+        padding: 20px 60px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 800px) {
         font-size: 15px;
     }
 
@@ -165,72 +185,60 @@ const Buttons = styled.button`
    }
 `;
 
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 40px;
-
-  @media (max-width: 750px) {
-    width: 70%;
-  }
-`;
 export const Body = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   return (
-    <Box
-      width="85%"
-      marginX="auto"
-      display="flex"
-      justifyContent={isMobile ? "center" : "left"}
-      alignItems="center"
-      flexDirection={isMobile ? "column" : "row"}
-      marginTop="100px"
-    >
+    <Box display="flex" flexDirection="column">
       <Box
-        width={isMobile ? "70%" : "50%"}
+        width="85%"
+        marginX="auto"
         display="flex"
-        justifyContent="center"
+        justifyContent={isMobile ? "center" : "left"}
+        alignItems="center"
+        flexDirection={isMobile ? "column" : "row"}
+        marginTop="100px"
       >
-        <img src={Ben} />
-      </Box>
+        <Box
+          width={isMobile ? "70%" : "50%"}
+          display="flex"
+          justifyContent="center"
+        >
+          <img src={Ben} />
+        </Box>
 
-      <Box width={isMobile ? "70%" : "50%"}>
-        <Title>
-          <H4>WELCOME TO THE</H4>
-          <H1>
-            LAZY CAT <br /> SOCIAL CLUB
-          </H1>
-        </Title>
+        <Box width={isMobile ? "70%" : "50%"}>
+          <Title>
+            <H4>WELCOME TO THE</H4>
+            <H1>
+              LAZY CAT <br /> SOCIAL CLUB
+            </H1>
+          </Title>
 
-        <P>
-          3,500 Lazy Cats, too lazy to do anything but make it and socialize on
-          the solana blockchain. Ermm.. We just want to buy our mothers a house
-          while sitting on the couch and minting NFTs. Shh.. Don't tell them
-          we're still on the couch!
-        </P>
+          <P>
+            3,500 Lazy Cats, too lazy to do anything but make it and socialize
+            on the solana blockchain. Ermm.. We just want to buy our mothers a
+            house while sitting on the couch and minting NFTs. Shh.. Don't tell
+            them we're still on the couch!
+          </P>
 
-        <P>
-          Owning a Lazy Cat makes you a member of the social club and grants you
-          access to member-only benefits..
-        </P>
+          <P>
+            Owning a Lazy Cat makes you a member of the social club and grants
+            you access to member-only benefits..
+          </P>
 
-        <Div>
-          <Button>JOIN THE CLUB</Button>
-          <Box
-            marginY="15px"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            paddingBottom="15px"
-       
-          >
-            <Buttons>TWITTER</Buttons>
-            <Buttons>DISCORD</Buttons>
-          </Box>
-        </Div>
+          <Div>
+            <Button>JOIN THE CLUB</Button>
+            <Box
+              marginY="15px"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Buttons>TWITTER</Buttons>
+              <Buttons>DISCORD</Buttons>
+            </Box>
+          </Div>
+        </Box>
       </Box>
       <Footer />
     </Box>
