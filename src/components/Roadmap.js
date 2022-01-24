@@ -16,29 +16,11 @@ const Body = styled.div`
 
   @media (max-width: 1100px){
     background-image: none ;
+    margin-bottom: 70px;
   }
 `;
-
 const H1 = styled.h1`
-font-size: 27px;
-line-height:32px
-letter-spacing: -0.04em;
-
-@media (max-width: 1100px){
-  font-size: 40px;
-}
-`;
-
-const P = styled.p`
-  font-size: 15px;
-  line-height: 24px;
-  letter-spacing: -0.04em;
-  margin-top: 10px;
-
-  @media (max-width: 1100px){
-    font-size: 13px;
-    
-  }
+  padding:15px;
 `;
 
 const Ul = styled.ul`
@@ -100,6 +82,8 @@ export const Roadmap = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      
+     
     >
       <Body>
         <Box
@@ -112,12 +96,12 @@ export const Roadmap = () => {
           textAlign= 'center'
          
         >
-          <H1>ROADMAP</H1>
-          <P>
+          <H1 className="head">ROADMAP</H1>
+          <p className="paragragh">
             We are in this for the long haul and we've set some realistic goals
             for this journey. <br />
             More updates and changes will be made as we move.
-          </P>
+          </p>
         </Box>
 
 
@@ -143,11 +127,11 @@ export const Roadmap = () => {
             blockchain
           </li>
         </Ul>
-        <Box display={isMobile ? "show" : "none"}>
+        <Box display={isMobile ? "show" : "none"} height='230px'>
           <img src={Mugg} />
         </Box>
 
-        <Footer border='solid'/>
+        <Footer />
       </Body>
     </Box>
   );

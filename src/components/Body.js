@@ -197,6 +197,7 @@ export const Body = () => {
         alignItems="center"
         flexDirection={isMobile ? "column" : "row"}
         marginTop="100px"
+        
       >
         <Box
           width={isMobile ? "70%" : "50%"}
