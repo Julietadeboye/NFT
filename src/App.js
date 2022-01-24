@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Body } from "./components/Body";
 import { Roadmap } from "./components/Roadmap";
 import { Traits } from "./components/Traits";
+import{Faq} from "./components/Faq";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Body />
       <Roadmap />
       <Traits />
+      <Faq/>
     </div>
   );
 }

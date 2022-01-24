@@ -24,21 +24,7 @@ const H1 = styled.h1`
 `;
 
 const Ul = styled.ul`
-  border: solid;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  width: 60%;
-  margin: 0 auto;
-  list-style: none;
-  letter-spacing: 0.04em;
-  line-height: 60px;
-  margin-top: 20px;
-  margin-bottom: 70px;
-  padding: 30px 90px;
-  font-size: 15px;
-  background-color: black;
+  
  
 
   @media (max-width: 1873px) {

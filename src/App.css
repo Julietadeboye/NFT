@@ -10,6 +10,23 @@ body {
   font-family: "Readex Pro", sans-serif;
   color: white;
 }
+.list {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 60%;
+  margin: 0 auto;
+  list-style: none;
+  letter-spacing: 0.04em;
+  line-height: 60px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  padding: 30px 90px;
+  font-size: 15px;
+  background-color: black;
+}
 
 .list li::before {
   content: "\2022";
@@ -30,6 +47,7 @@ body {
   font-size: 27px;
   line-height: 32px;
   letter-spacing: -0.04em;
+  text-align: center;
 }
 
 .paragraph{
@@ -37,6 +55,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.04em;
   margin-top: 15px;
+  text-align: center;
 
 
 }
