@@ -43,6 +43,17 @@ const Item = styled.li`
     color: rgba(255, 255, 255, 0.62);
   }
 `;
+const A = styled.a`
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  justify-content: center;
+  &:hover {
+    color: rgba(255, 255, 255, 0.62);
+  }
+`;
 
 const Button = styled.button`
   border: none;
@@ -82,6 +93,7 @@ const Button = styled.button`
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
+  
   return (
     <Head>
       <Box paddingTop="60px" width={isMedium ? "35%" : "50%"}>
@@ -94,7 +106,7 @@ export const Header = () => {
         justifyContent="space-between"
       >
         <List>
-          <Item>ROADMAP</Item>
+          <Item><A href="#roadmap">ROADMAP</A> </Item>
           <Item>TRAITS & RARITY</Item>
           <Item> FAQ</Item>
           <Item>TEAM</Item>

@@ -63,21 +63,21 @@ export const Traits = () => {
             src={Jordan}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
           <motion.img
             className="bk-img"
             src={Mug}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
           <motion.img
             className="bk-img"
             src={Pj}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
         </Box>
 
@@ -87,14 +87,14 @@ export const Traits = () => {
             src={Hat}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
           <motion.img
             className="bk-img"
             src={Pink}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
         </Box>
 
@@ -104,7 +104,7 @@ export const Traits = () => {
             src={Lazy}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
         </Box>
       </Box>
@@ -116,7 +116,7 @@ export const Traits = () => {
             src={Jordan}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
           <motion.img
             className="bk-img"
@@ -145,7 +145,7 @@ export const Traits = () => {
             src={Hat}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
           <motion.img
             className="bk-img"
@@ -162,7 +162,7 @@ export const Traits = () => {
             src={Pink}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: "easeIn", duration: 2 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           />
         </Box>
 

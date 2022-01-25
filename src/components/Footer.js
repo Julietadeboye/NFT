@@ -10,10 +10,8 @@ margin: 0 auto;
   margin-top: 1rem;
   padding: 1rem;
   font-size: 12px;
-  padding-top:5em;
-  margin-bottom:3rem;
+  padding-top:5em; 
  
-  
  
  
 

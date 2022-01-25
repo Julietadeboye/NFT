@@ -19,14 +19,9 @@ const Body = styled.div`
     margin-bottom: 70px;
   }
 `;
-const H1 = styled.h1`
-  padding:15px;
-`;
+
 
 const Ul = styled.ul`
-  
- 
-
   @media (max-width: 1873px) {
     width: 65%;
   }
@@ -63,33 +58,32 @@ export const Roadmap = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   return (
     <Box
+      id="roadmap"
       width={isMobile ? "95%" : "85%"}
       marginX="auto"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      
-     
+    paddingTop="7rem"
+   
     >
       <Body>
         <Box
-         width='60%'
-         marginX="auto"
+          width="60%"
+          marginX="auto"
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          textAlign= 'center'
-         
+          textAlign="center"
         >
-          <H1 className="head">ROADMAP</H1>
+          <h1 className="head">ROADMAP</h1>
           <p className="paragragh">
             We are in this for the long haul and we've set some realistic goals
             for this journey. <br />
             More updates and changes will be made as we move.
           </p>
         </Box>
-
 
         <Ul className="list">
           <Box textDecoration="line-through">
@@ -113,8 +107,14 @@ export const Roadmap = () => {
             blockchain
           </li>
         </Ul>
-        <Box display={isMobile ? "show" : "none"} height='230px'>
-          <img src={Mugg}  alt ="nft"/>
+        <Box
+          display={isMobile ? "show" : "none"}
+          height="250px"
+          width="540px"
+          overflow="hidden"
+          overflowX="hidden"
+        >
+          <img src={Mugg} alt="nft" />
         </Box>
 
         <Footer />
