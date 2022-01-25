@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Box from "ui-box";
-import Ben from "../assets/images/benParker.svg";
+import Img from "../assets/images/cat.gif"
 import { useMediaQuery } from "react-responsive";
 import { Footer } from "./Footer";
+import "../App.css";
 
 const H4 = styled.h4`
   font-size: 20px;
@@ -203,8 +204,14 @@ export const Body = () => {
           width={isMobile ? "70%" : "50%"}
           display="flex"
           justifyContent="center"
+         
+         
         >
-          <img src={Ben} />
+          <img src={Img} alt="cat"
+          className="image"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeIn", duration: 2 }} />
         </Box>
 
         <Box width={isMobile ? "70%" : "50%"}>

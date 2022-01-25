@@ -85,7 +85,7 @@ export const Header = () => {
   return (
     <Head>
       <Box paddingTop="60px" width={isMedium ? "35%" : "50%"}>
-        <img src={Logo} />
+        <img src={Logo} alt="logo"/>
       </Box>
 
       <Box

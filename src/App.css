@@ -10,6 +10,16 @@ body {
   font-family: "Readex Pro", sans-serif;
   color: white;
 }
+
+.image{
+  width: 70%;
+  border-radius: 50%;
+}
+
+.bk-img{
+  width: 9%;
+}
+
 .list {
   border: solid;
   display: flex;
@@ -25,7 +35,7 @@ body {
   margin-bottom: 70px;
   padding: 30px 90px;
   font-size: 15px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .list li::before {

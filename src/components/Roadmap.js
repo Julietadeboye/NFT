@@ -114,7 +114,7 @@ export const Roadmap = () => {
           </li>
         </Ul>
         <Box display={isMobile ? "show" : "none"} height='230px'>
-          <img src={Mugg} />
+          <img src={Mugg}  alt ="nft"/>
         </Box>
 
         <Footer />
