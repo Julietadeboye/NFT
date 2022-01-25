@@ -191,7 +191,7 @@ export const Body = () => {
   return (
     <Box display="flex" flexDirection="column" marginBottom="200px">
       <Box
-        width="85%"
+          width={isMobile ? "95%" : "85%"}
         marginX="auto"
         display="flex"
         justifyContent={isMobile ? "center" : "left"}

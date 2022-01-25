@@ -70,6 +70,9 @@ body {
 
 }
 
+span {
+  color: #FFD600;
+}
 
 /* media queries */
 @media screen and (max-width: 1753px) {
@@ -86,4 +89,6 @@ body {
   .paragraph{
     font-size: 13px;
   }
+
+ 
 }

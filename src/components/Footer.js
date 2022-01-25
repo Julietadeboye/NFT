@@ -19,6 +19,7 @@ margin: 0 auto;
 
   @media (max-width: 1100px) {
     font-size: 17px;
+    width: 95%;
     border-top: 2px solid rgba(255, 255, 255, 0.08);
     
    
