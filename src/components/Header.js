@@ -93,6 +93,10 @@ const Button = styled.button`
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
+
+  const handleClick = ()=>{
+console.log('Hello')
+  };
   
   return (
     <Head>
@@ -121,7 +125,7 @@ export const Header = () => {
         justifyContent="space-between"
         marginX="20px"
       >
-        {isMobile && <Frame1 size="33px" />}
+        {isMobile && <Frame1 size="33px" onclick={handleClick} />}
       </Box>
     </Head>
   );
