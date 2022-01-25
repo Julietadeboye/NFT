@@ -13,16 +13,15 @@ import Pink from "../assets/images/pink-bucket-hat.svg";
 import { motion } from "framer-motion";
 
 const H5 = styled.h5`
-font-size:16px;
-margin-top:15px;
-display: flex;
-justify-content:center;
-align-items:center;
+  font-size: 16px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@media (max-width: 1100px){
-  display: none;
-}
-  
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;
 
 const H1 = styled.h1`
@@ -33,7 +32,7 @@ const H1 = styled.h1`
 export const Traits = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   return (
-    <Box width="85%" marginX="auto">
+    <Box width="85%" marginX="auto" id="traits"  paddingTop="1rem">
       <Box
         textAlign="center"
         marginTop="6rem"
@@ -110,7 +109,7 @@ export const Traits = () => {
       </Box>
 
       <Box display={isMobile ? "show" : "none"}>
-      <Box display="flex" justifyContent="space-around">
+        <Box display="flex" justifyContent="space-around">
           <motion.img
             className="bk-img"
             src={Jordan}
@@ -165,7 +164,6 @@ export const Traits = () => {
             transition={{ ease: "easeIn", duration: 1 }}
           />
         </Box>
-
       </Box>
 
       <Footer />

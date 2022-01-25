@@ -35,7 +35,7 @@ body {
   margin-bottom: 70px;
   padding: 30px 90px;
   font-size: 15px;
-  /* background-color: black; */
+  background-color: black;
 }
 
 .list li::before {
@@ -96,6 +96,4 @@ span {
   .paragraph {
     font-size: 13px;
   }
-
-  
 }

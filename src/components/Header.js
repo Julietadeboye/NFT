@@ -107,9 +107,9 @@ export const Header = () => {
       >
         <List>
           <Item><A href="#roadmap">ROADMAP</A> </Item>
-          <Item>TRAITS & RARITY</Item>
-          <Item> FAQ</Item>
-          <Item>TEAM</Item>
+          <Item><A href="#traits">TRAITS & RARITY</A></Item>
+          <Item> <A href="#faq">FAQ</A> </Item>
+          <Item><A href="#team">TEAM</A></Item>
         </List>
 
         <Button>CONNECT WALLET </Button>

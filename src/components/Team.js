@@ -59,7 +59,7 @@ export const Team = () => {
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
 
   return (
-    <Box marginY ="10rem" marginX=".5em">
+    <Box marginY ="10rem" marginX=".5em" id="team">
       <H1 className="head"> TEAM</H1>
       <Teams>
         <P className="paragraph">

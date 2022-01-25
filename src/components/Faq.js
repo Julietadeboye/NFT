@@ -6,19 +6,20 @@ import styled from "@emotion/styled";
 import Twelve from "../assets/images/twelve.svg";
 
 const Body = styled.div`
-  background-image: (${Twelve});
-  height: 100%;
-  width:100%;
- 
+  background-image: url(${Twelve});
+  width: '100vw';
+     height: '100vh';
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-//   width: 85%;
-//   margin: 0 auto;
+
 `;
 
 export const Faq = () => {
   return (
-    <Body >
-      <Box marginTop="100px">
+    <Body>
+      <Box marginTop="100px" id="faq" paddingTop="5rem">
         <h1 className="head">FAQ</h1>
         <p className="paragraph">Questions will be updated </p>
         <ul className="list">
