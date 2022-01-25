@@ -20,8 +20,9 @@ justify-content:center;
 align-items:center;
 
 @media (max-width: 1100px){
-  margin-top: 150px;
-  font-size:20px;
+  display: none;
+}
+  
 `;
 
 const H1 = styled.h1`
@@ -55,7 +56,7 @@ export const Traits = () => {
 
         <H5>Rarity will be released after each Lazy Cat has been revealed!</H5>
       </Box>
-      <div>
+      <Box display={isMobile ? "none" : "show"}>
         <Box display="flex" justifyContent="space-between">
           <motion.img
             className="bk-img"
@@ -79,8 +80,7 @@ export const Traits = () => {
             transition={{ ease: "easeIn", duration: 2 }}
           />
         </Box>
-      </div>
-      <div>
+
         <Box display="flex" justifyContent="space-around">
           <motion.img
             className="bk-img"
@@ -97,9 +97,8 @@ export const Traits = () => {
             transition={{ ease: "easeIn", duration: 2 }}
           />
         </Box>
-      </div>
-      <div>
-      <Box display="flex" justifyContent="center">
+
+        <Box display="flex" justifyContent="center">
           <motion.img
             className="bk-img"
             src={Lazy}
@@ -108,7 +107,66 @@ export const Traits = () => {
             transition={{ ease: "easeIn", duration: 2 }}
           />
         </Box>
-      </div>
+      </Box>
+
+      <Box display={isMobile ? "show" : "none"}>
+      <Box display="flex" justifyContent="space-around">
+          <motion.img
+            className="bk-img"
+            src={Jordan}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+          <motion.img
+            className="bk-img"
+            src={Mug}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+        </Box>
+
+        <h5>Rarity will be released after each Lazy Cat has been revealed!</h5>
+
+        <Box display="flex" justifyContent="center">
+          <motion.img
+            className="bk-img"
+            src={Pj}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+        </Box>
+
+        <Box display="flex" justifyContent="space-around">
+          <motion.img
+            className="bk-img"
+            src={Hat}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+          <motion.img
+            className="bk-img"
+            src={Lazy}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+        </Box>
+
+        <Box display="flex" justifyContent="center">
+          <motion.img
+            className="bk-img"
+            src={Pink}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 2 }}
+          />
+        </Box>
+
+      </Box>
 
       <Footer />
     </Box>

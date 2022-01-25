@@ -11,12 +11,12 @@ body {
   color: white;
 }
 
-.image{
+.image {
   width: 70%;
   border-radius: 50%;
 }
 
-.bk-img{
+.bk-img {
   width: 9%;
 }
 
@@ -60,18 +60,25 @@ body {
   text-align: center;
 }
 
-.paragraph{
+.paragraph {
   font-size: 15px;
   line-height: 24px;
   letter-spacing: -0.04em;
   margin-top: 15px;
   text-align: center;
+}
 
-
+h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+  font-size: 20px;
+  text-align: center;
 }
 
 span {
-  color: #FFD600;
+  color: #ffd600;
 }
 
 /* media queries */
@@ -86,9 +93,7 @@ span {
     font-size: 40px;
   }
 
-  .paragraph{
+  .paragraph {
     font-size: 13px;
   }
-
- 
 }
