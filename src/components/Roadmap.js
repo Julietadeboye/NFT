@@ -60,10 +60,10 @@ export const Roadmap = () => {
       id="roadmap"
       width={isMobile ? "95%" : "85%"}
       marginX="auto"
-      display="flex"
+      display="flex"s
       justifyContent="center"
       alignItems="center"
-      paddingTop="7rem"
+      paddingTop={isMobile ? "1rem" : "7rem"}
     >
       <Body>
         <Box
