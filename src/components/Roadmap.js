@@ -20,7 +20,6 @@ const Body = styled.div`
   }
 `;
 
-
 const Ul = styled.ul`
   @media (max-width: 1873px) {
     width: 65%;
@@ -64,8 +63,7 @@ export const Roadmap = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-    paddingTop="7rem"
-   
+      paddingTop="7rem"
     >
       <Body>
         <Box
@@ -110,9 +108,7 @@ export const Roadmap = () => {
         <Box
           display={isMobile ? "show" : "none"}
           height="250px"
-          width="540px"
           overflow="hidden"
-          overflowX="hidden"
         >
           <img src={Mugg} alt="nft" />
         </Box>
