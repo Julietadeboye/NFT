@@ -5,6 +5,8 @@ import Logo from "../assets/images/logo.svg";
 import { Frame1 } from "./atoms/icons";
 import { useMediaQuery } from "react-responsive";
 
+
+
 const Head = styled.div`
   width: 85%;
   margin: 0 auto;
@@ -94,9 +96,7 @@ export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
 
-  const handleClick = ()=>{
-console.log('Hello')
-  };
+  
   
   return (
     <Head>
@@ -125,7 +125,7 @@ console.log('Hello')
         justifyContent="space-between"
         marginX="20px"
       >
-        {isMobile && <Frame1 size="33px" onclick={handleClick} />}
+        {isMobile && <Frame1 size="33px" />}
       </Box>
     </Head>
   );
