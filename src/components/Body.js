@@ -207,11 +207,11 @@ export const Body = () => {
          
          
         >
-          <img src={Img} alt="cat"
+          {/* <img src={Img} alt="cat"
           className="image"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ ease: "easeIn", duration: 2 }} />
+          transition={{ ease: "easeIn", duration: 2 }} /> */}
         </Box>
 
         <Box width={isMobile ? "70%" : "50%"}>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState}  from "react";
 import styled from "@emotion/styled";
 import Box from "ui-box";
+// import "./App.css";
 import Logo from "../assets/images/logo.svg";
 import { Frame1 } from "./atoms/icons";
 import { useMediaQuery } from "react-responsive";
@@ -23,6 +24,8 @@ const Head = styled.div`
   @media (max-width: 1300px) {
     width: 95%;
   }
+
+ 
 `;
 
 const List = styled.ul`
@@ -34,6 +37,19 @@ const List = styled.ul`
   list-style: none;
   padding-left: 0;
   font-size: 14px;
+
+`;
+
+const Lst = styled.ul`
+list-style: none;
+padding-left: 0;
+display:none;
+@media (max-width: 1000px) {
+display:flex;
+  flex-direction: column;
+  justify-content: right;
+align-items: right;
+}
 `;
 
 const Item = styled.li`
@@ -44,7 +60,18 @@ const Item = styled.li`
   &:hover {
     color: rgba(255, 255, 255, 0.62);
   }
+
 `;
+
+const Items = styled.li`
+@media (max-width: 1000px) {
+  width: 100%;
+  text-align: right;
+  margin-right: 0px;
+  padding: 20px 0;
+}
+`;
+
 const A = styled.a`
   margin-right: 20px;
   color: rgba(255, 255, 255, 0.92);
@@ -90,13 +117,22 @@ const Button = styled.button`
 
   @media (max-width: 1300px) {
     margin-right: 0;
+  }
+
+  @media (max-width: 1000px) {
+   display : none;
+  }  
 `;
 
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
 
-  
+  const [toggleMenu, setToggleMenu] = useState(false)
+
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
+  }
   
   return (
     <Head>
@@ -124,8 +160,18 @@ export const Header = () => {
         alignItems="center"
         justifyContent="space-between"
         marginX="20px"
+        flexDirection="column"
       >
-        {isMobile && <Frame1 size="33px" />}
+        {isMobile && <Frame1 size="33px" onClick={toggleNav} />}
+        {toggleMenu && (
+          <Lst>
+              <Items><A href="#roadmap">ROADMAP</A> </Items>
+              <Items><A href="#traits">TRAITS & RARITY</A></Items>
+              <Items> <A href="#faq">FAQ</A> </Items>
+              <Items><A href="#team">TEAM</A></Items>
+          </Lst>
+        )}
+       
       </Box>
     </Head>
   );
