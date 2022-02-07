@@ -20,6 +20,7 @@ const Head = styled.div`
   margin-top: 10px;
   position: sticky;
   top: 10px;
+  
 
   @media (max-width: 1300px) {
     width: 95%;
@@ -49,6 +50,7 @@ display:flex;
   flex-direction: column;
   justify-content: right;
 align-items: right;
+margin-top: 10px;
 }
 `;
 
@@ -68,7 +70,7 @@ const Items = styled.li`
   width: 100%;
   text-align: right;
   margin-right: 0px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 `;
 
@@ -124,6 +126,10 @@ const Button = styled.button`
   }  
 `;
 
+const H1 = styled.h1`
+color: #ffd600;
+`;
+
 export const Header = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   const isMedium = useMediaQuery({ query: "(max-width: 1400px)" });
@@ -134,6 +140,9 @@ export const Header = () => {
     setToggleMenu(!toggleMenu)
   }
   
+  const closeMenu = () => {
+    setToggleMenu(false)
+  }
   return (
     <Head>
       <Box paddingTop="60px" width={isMedium ? "35%" : "50%"}>
@@ -156,22 +165,21 @@ export const Header = () => {
       </Box>
 
       <Box
-        display="flex"
-        alignItems="center"
+        display={ isMobile ? "flex" : "none"}
+        alignItems="start"
         justifyContent="space-between"
         marginX="20px"
-        flexDirection="column"
-      >
-        {isMobile && <Frame1 size="33px" onClick={toggleNav} />}
+        marginTop="20px"
+          >
         {toggleMenu && (
           <Lst>
-              <Items><A href="#roadmap">ROADMAP</A> </Items>
-              <Items><A href="#traits">TRAITS & RARITY</A></Items>
-              <Items> <A href="#faq">FAQ</A> </Items>
-              <Items><A href="#team">TEAM</A></Items>
+              <Items><A href="#roadmap" onClick= {closeMenu}>ROADMAP</A> </Items>
+              <Items><A href="#traits" onClick= {closeMenu}>TRAITS & RARITY</A></Items>
+              <Items> <A href="#faq" onClick= {closeMenu}>FAQ</A> </Items>
+              <Items><A href="#team" onClick= {closeMenu}>TEAM</A></Items>
           </Lst>
         )}
-       
+        {toggleMenu ? <H1 onClick={toggleNav}>x</H1> : <Frame1 size="33px" onClick={toggleNav} />}
       </Box>
     </Head>
   );
